@@ -113,7 +113,7 @@ body {
     border: none; /* Убираем кромку */
 }
 .right-icon {
-    width: 24px; /* Размер PNG-иконки */
+    width: 24px;
     height: 24px;
 }
 .right-button:hover {
@@ -138,7 +138,7 @@ body {
     border: none; /* Убираем кромку */
 }
 .left-icon {
-    width: 24px; /* Размер PNG-иконки */
+    width: 24px;
     height: 24px;
 }
 .left-button:hover {
@@ -180,7 +180,7 @@ body {
     margin-bottom: 10px;
 }
 .like-icon {
-    width: 24px; /* Размер PNG-иконки */
+    width: 24px;
     height: 24px;
 }
 
@@ -232,7 +232,7 @@ body {
     cursor: pointer;
 }
 .home-icon {
-    width: 24px; /* Размер PNG-иконки */
+    width: 24px;
     height: 24px;
 }
 .home-button:hover {
@@ -257,7 +257,7 @@ body {
     padding: 0;
 }
 .plus-icon {
-    width: 24px; /* Размер PNG-иконки */
+    width: 24px;
     height: 24px;
 }
 .plus-button:hover {
@@ -278,7 +278,7 @@ body {
     cursor: pointer;
 }
 .profile-icon {
-    width: 24px; /* Размер PNG-иконки */
+    width: 24px;
     height: 24px;
 }
 .profile-button:hover {

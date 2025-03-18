@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Форма входа</title>
+    <title>Вход</title>
     <link rel="stylesheet" href="entrance.css">
+    <base href="entrancePicture/" id="base-tag">
 </head>
 <body>
 
@@ -17,7 +18,7 @@
             </div>
         </div>
 
-        <!-- Правая часть (Форма) -->
+        <!-- Правая часть -->
         <div class="right-side">
             <form class="form">
                 <label for="email" class="label">Электропочта</label>
@@ -33,10 +34,15 @@
                     </button>
                 </div>
 
-                <button type="button" class="submit-button" onclick="window.location.href='posts.html'">Продолжить</button>
+                <button type="button" class="submit-button" id="continue-button">Продолжить</button>
             </form>
         </div>
     </div>
-
+    <script>
+        document.getElementById("continue-button").addEventListener("click", function() {
+            document.getElementById("base-tag").remove();  // Удаляем <base>
+            window.location.href = 'posts.html';
+        });
+    </script>
 </body>
 </html>

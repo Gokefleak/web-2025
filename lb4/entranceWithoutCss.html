@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Вход</title>
+    <base href="entrancePicture/" id="base-tag">
 </head>
 <body>
     <h1>Войти</h1>
@@ -20,8 +21,15 @@
                     <img src="eye-off.png" alt="Скрыть пароль">
                 </button>
             </div>
-            <button type="button" onclick="window.location.href='postsWithoutCss.html'">Продолжить</button>
+            <button type="button" id="continue-button">Продолжить</button>
         </form>
     </div>
+
+    <script>
+        document.getElementById("continue-button").addEventListener("click", function() {
+            document.getElementById("base-tag").remove();  // Удаляем <base>
+            window.location.href = 'postsWithoutCss.html';
+        });
+    </script>
 </body>
 </html>
