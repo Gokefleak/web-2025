@@ -1,0 +1,122 @@
+/* Подключение шрифта Golos UI */
+@import url('https://fonts.googleapis.com/css2?family=Golos+UI:wght@400;700&display=swap');
+
+body {
+    font-family: 'Golos UI', sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Основной контейнер */
+.container {
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Левая часть */
+.left-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Контейнер для изображения и заголовка */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.title {
+    position: absolute;
+    top: -130px;
+    left: -70px;
+    font-size: 100px;
+    font-weight: 700;
+    color: #222222;
+    
+}
+
+/* Правая часть */
+.right-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Форма */
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 343px;
+}
+
+/* Метки */
+.label {
+    font-size: 15px;
+    font-weight: 400;
+    color: #222222;
+    margin-bottom: 5px;
+}
+
+/* Поля ввода */
+.input {
+    width: 90%;
+    height: 40px;
+    padding: 8px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+/* Подсказка под полем */
+.hint {
+    font-size: 12px;
+    color: #888;
+    margin-top: 4px;
+    margin-bottom: 16px;
+}
+
+/* Поле пароля */
+.password-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.eye-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: -35px;
+}
+.eye-icon {
+    width: 24px; /* Размер PNG-иконки */
+    height: 24px;
+}
+
+/* Кнопка */
+.submit-button {
+    width: 95%;
+    background-color: #222222;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

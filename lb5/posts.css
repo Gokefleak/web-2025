@@ -1,0 +1,286 @@
+/* Подключение шрифта Golos UI */
+@import url('https://fonts.googleapis.com/css2?family=Golos+UI:wght@400;700&display=swap');
+
+body {
+    font-family: 'Golos UI', sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Основной контейнер */
+.container {
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Контейнер, который будет по центру */
+.centre-side {
+    width: 474px; /* ширина контейнера */
+    height: 100vh; /* высота на весь экран */
+    position: relative;
+    margin: 0 auto; /* центровка контейнера по горизонтали */
+}
+
+/* Контейнер для изображения и текста */
+.image-container {
+    display: flex; /* Используем flexbox для выравнивания */
+    align-items: center; /* Выравнивание по вертикали */
+    position: relative;
+}
+
+/* Изображение */
+.image {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    object-fit: cover; /* Обрезает изображение, заполняя квадрат */
+    margin-right: 10px; /* Отступ между изображением и текстом */
+}
+
+/* Текст */
+.text {
+    font-size: 16px; /* Размер шрифта для текста */
+    color: #333; /* Цвет текста */
+}
+.title {
+    position: absolute;
+    top: -130px;
+    left: -70px;
+    font-size: 100px;
+    font-weight: 700;
+    color: #222222;
+    
+}
+/* Кнопка "редактирование" */
+.edit-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f8f8f8;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: auto; /* Отталкивает кнопку вправо */
+}
+.edit-icon {
+    width: 24px; /* Размер PNG-иконки */
+    height: 24px;
+}
+.edit-button:hover {
+    background: lightgray;
+}
+
+
+/* Контейнер для изображения */
+.image-below-container {
+    width: 474px; /* Фиксированная ширина контейнера */
+    height: 474px; /* Фиксированная высота контейнера */
+    position: relative; /* Для позиционирования изображения внутри контейнера */
+    overflow: hidden; /* Скрывает части изображения, выходящие за пределы контейнера */
+}
+
+/* Изображение */
+.image-below {
+    width: 100%; /* Растягивается по ширине контейнера */
+    height: 100%; /* Растягивается по высоте контейнера */
+    object-fit: cover; /* Обрезает изображение, чтобы оно заполнило квадрат */
+    border-radius: 10px; /* Скругленные углы */
+}
+/* Кнопка слева от изображения */
+.right-button {
+    position: absolute;
+    right: 10px; /* Кнопка прижата к правому краю контейнера */
+    top: 50%; /* Центрируем кнопку по вертикали */
+    transform: translateY(-50%); /* Для точного выравнивания по центру */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2); /* Прозрачный темный фон */
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none; /* Убираем кромку */
+}
+.right-icon {
+    width: 24px; /* Размер PNG-иконки */
+    height: 24px;
+}
+.right-button:hover {
+    background: rgba(1, 1, 1, 0.6); /* Прозрачный темный фон */
+    color: white; /* Меняем цвет эмодзи на белый */
+}
+/* Кнопка слева от изображения */
+.left-button {
+    position: absolute;
+    left: 10px; /* Кнопка прижата к левому краю контейнера */
+    top: 50%; /* Центрируем кнопку по вертикали */
+    transform: translateY(-50%); /* Для точного выравнивания по центру */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2); /* Прозрачный темный фон */
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none; /* Убираем кромку */
+}
+.left-icon {
+    width: 24px; /* Размер PNG-иконки */
+    height: 24px;
+}
+.left-button:hover {
+    background: rgba(1, 1, 1, 0.6); /* Прозрачный темный фон */
+    color: white; /* Меняем цвет эмодзи на белый */
+}
+.ellipse {
+    position: absolute;
+    right: 10px;
+    top: 5%;
+    transform: translateY(-50%);
+    width: 44px; /* Увеличиваем ширину */
+    height: 24px; /* Высота остаётся такой же */
+    border-radius: 15px; /* Закругляем углы */
+    background: rgba(0, 0, 0, 0.2); /* Полупрозрачный тёмный фон */
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: white;
+}
+.like-button {
+    margin-top: 10px; /* Отступ сверху от изображения */
+    left: 0px;
+    width: auto; /* Автоматическая ширина */
+    height: 30px;
+    border-radius: 10px;
+    background: rgba(137, 137, 137, 0.6);
+    font-size: 14px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px; /* Регулируем отступы */
+    gap: 5px; /* Расстояние между изображением и числом */
+    margin-bottom: 10px;
+}
+.like-icon {
+    width: 24px; /* Размер PNG-иконки */
+    height: 24px;
+}
+
+.like-button:hover {
+    background: rgba(1, 1, 1, 0.6);
+    color: white;
+}
+
+.info-text {
+    font-size: 14px;
+    margin-top: 10px; /* Отступ сверху от изображения */
+    color: #333; /* Цвет текста */
+}
+.more-text {
+    font-size: 13px;
+    color: #545454; /* Цвет текста */
+}
+.time-text {
+    font-size: 13px;
+    margin-top:10px; /* Отступ сверху от изображения */
+    color: #545454; /* Цвет текста */
+    margin-bottom: 20px;
+}
+/* Левая полоска */
+.left-bar {
+    position: fixed;  /* Фиксируем слева */
+    left: 0;          /* Прижимаем к левому краю */
+    top: 0;
+    width: 60px;      /* Ширина панели */
+    height: 100vh;    /* На весь экран */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.home-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.home-icon {
+    width: 24px; /* Размер PNG-иконки */
+    height: 24px;
+}
+.home-button:hover {
+    background: lightgray;
+}
+
+/* Кнопка "плюс" */
+.plus-button {
+    background: white;
+    border: none;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Делаем кнопку круглой */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold; /* Делаем символ жирнее */
+    line-height: 1; /* Убираем лишний отступ */
+    padding: 0;
+}
+.plus-icon {
+    width: 24px; /* Размер PNG-иконки */
+    height: 24px;
+}
+.plus-button:hover {
+    background: lightgray;
+}
+
+/* Кнопка "плюс" */
+.profile-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.profile-icon {
+    width: 24px; /* Размер PNG-иконки */
+    height: 24px;
+}
+.profile-button:hover {
+    background: lightgray;
+}
