@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+UI:wght@400;700&display=swap');
+
+body {
+    font-family: 'Golos UI', sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+p {
+    text-align: center; /* Центрирует текст */
+    margin-top: 8px; /* Отступ между фото и текстом */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    max-width: 966px;
+    width: 100%;
+}
+
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Центрирует изображение */
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.image {
+    width: 123px;
+    height: 123px;
+    border-radius: 10px;
+    object-fit: cover; /* Обрезает изображение, заполняя квадрат */
+}
+
+.text {
+    font-size: 25px; /* Размер шрифта для текста */
+    color: #333; /* Цвет текста */
+}
+.name {
+    font-weight: bold; /* Жирный текст */
+    font-size: 32px; /* Размер шрифта для текста */
+    color: #333; /* Цвет текста */
+}
+.title {
+    position: absolute;
+    top: -130px;
+    left: -70px;
+    font-size: 100px;
+    font-weight: 700;
+    color: #222222;
+    
+}
+
+.image-below-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.image-below {
+    width: 322px;
+    height: 322px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+.left-bar {
+    position: fixed;  /* Фиксируем слева */
+    left: 0;          /* Прижимаем к левому краю */
+    top: 0;
+    width: 60px;      /* Ширина панели */
+    height: 100vh;    /* На весь экран */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.home-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.home-icon {
+    width: 24px;
+    height: 24px;
+}
+.home-button:hover {
+    background: lightgray;
+}
+
+.plus-button {
+    background: white;
+    border: none;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Делаем кнопку круглой */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold; /* Делаем символ жирнее */
+    line-height: 1; /* Убираем лишний отступ */
+    padding: 0;
+}
+.plus-icon {
+    width: 24px;
+    height: 24px;
+}
+.plus-button:hover {
+    background: lightgray;
+}
+
+.profile-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.profile-icon {
+    width: 24px;
+    height: 24px;
+}
+.profile-button:hover {
+    background: lightgray;
+}

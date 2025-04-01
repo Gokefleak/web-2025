@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <link rel="stylesheet" href="entrance.css">
+    <base href="entrancePicture/" id="base-tag">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Левая часть -->
+        <div class="left-side">
+            <div class="image-container">
+                <img src="image.jpg" alt="Фото" class="image">
+                <h1 class="title">Войти</h1>
+            </div>
+        </div>
+
+        <!-- Правая часть -->
+        <div class="right-side">
+            <form class="form">
+                <label for="email" class="label">Электропочта</label>
+                <input type="email" id="email" class="input" placeholder="*****@***.**">
+                <p class="hint">Введите электропочту в формате *****@***.**</p>
+
+                <label for="password" class="label">Пароль</label>
+                
+                <div class="password-container">
+                    <input type="password" id="password" class="input">
+                    <button type="button" class="eye-button">
+                        <img src="eye-off.png" alt="Лайк" class="eye-icon">
+                    </button>
+                </div>
+
+                <button type="button" class="submit-button" id="continue-button">Продолжить</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById("continue-button").addEventListener("click", function() {
+            document.getElementById("base-tag").remove();  // Удаляем <base>
+            window.location.href = 'posts.html';
+        });
+    </script>
+</body>
+</html>
