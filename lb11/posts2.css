@@ -1,0 +1,469 @@
+/* Подключение шрифта Golos UI */
+@import url('https://fonts.googleapis.com/css2?family=Golos+UI:wght@400;700&display=swap');
+
+body {
+    font-family: 'Golos UI', sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Основной контейнер */
+.container {
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Центральная часть */
+.centre-side {
+    width: 474px;
+    height: 100vh;
+    position: relative;
+    margin: 0 auto;
+    overflow-y: auto;
+}
+
+/* Пост */
+.image-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.image {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.text {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+.title {
+    position: absolute;
+    top: -130px;
+    left: -70px;
+    font-size: 100px;
+    font-weight: 700;
+    color: #222222;
+}
+
+/* Кнопка редактирования */
+.edit-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f8f8f8;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: auto;
+    transition: background-color 0.2s ease;
+}
+
+.edit-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.edit-button:hover {
+    background: lightgray;
+}
+
+/* Основное изображение */
+.image-below-container {
+    width: 474px;
+    height: 474px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.image-below {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+
+/* Кнопка слева от изображения */
+.right-button {
+    position: absolute;
+    right: 10px; /* Кнопка прижата к правому краю контейнера */
+    top: 50%; /* Центрируем кнопку по вертикали */
+    transform: translateY(-50%); /* Для точного выравнивания по центру */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2); /* Прозрачный темный фон */
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none; /* Убираем кромку */
+}
+.right-icon {
+    width: 24px;
+    height: 24px;
+}
+.right-button:hover {
+    background: rgba(1, 1, 1, 0.6); /* Прозрачный темный фон */
+    color: white; /* Меняем цвет эмодзи на белый */
+}
+/* Кнопка слева от изображения */
+.left-button {
+    position: absolute;
+    left: 10px; /* Кнопка прижата к левому краю контейнера */
+    top: 50%; /* Центрируем кнопку по вертикали */
+    transform: translateY(-50%); /* Для точного выравнивания по центру */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2); /* Прозрачный темный фон */
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none; /* Убираем кромку */
+}
+.left-icon {
+    width: 24px;
+    height: 24px;
+}
+.left-button:hover {
+    background: rgba(1, 1, 1, 0.6); /* Прозрачный темный фон */
+    color: white; /* Меняем цвет эмодзи на белый */
+}
+
+/* Эллипс справа сверху */
+.ellipse {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    width: 44px;
+    height: 24px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: white;
+    z-index: 2;
+}
+
+/* Кнопка лайка */
+.like-button {
+    margin-top: 10px;
+    width: auto;
+    height: 30px;
+    border-radius: 15px;
+    background: rgba(137, 137, 137, 0.1);
+    font-size: 14px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    gap: 5px;
+    margin-bottom: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.like-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.like-button:hover {
+    background: rgba(137, 137, 137, 0.2);
+}
+
+/* Текст поста */
+.post-text {
+    position: relative;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+.post-text__content {
+    font-size: 14px;
+    color: #333;
+    word-break: break-word;
+    margin-bottom: 5px;
+}
+
+.post-text__content--collapsed {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.post-text__toggle-button {
+  display: none; /* Скрыта по умолчанию */
+  background: none;
+  border: none;
+  color: #8e8e8e;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 5px; /* отступ сверху от текста */
+}
+
+.post-text__toggle-button.visible {
+  display: inline-block; /* Не inline! inline-block встанет на новую строку */
+}
+
+
+.info-text {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.more-text {
+    font-size: 13px;
+    color: #545454;
+}
+
+.time-text {
+    font-size: 13px;
+    margin: 5px 0 20px;
+    color: #545454;
+}
+
+/* Левая панель */
+.left-bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-top: 20px;
+    z-index: 10;
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.home-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.home-icon {
+    width: 24px;
+    height: 24px;
+}
+.home-button:hover {
+    background: lightgray;
+}
+
+/* Кнопка "плюс" */
+.plus-button {
+    background: white;
+    border: none;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Делаем кнопку круглой */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold; /* Делаем символ жирнее */
+    line-height: 1; /* Убираем лишний отступ */
+    padding: 0;
+}
+.plus-icon {
+    width: 24px;
+    height: 24px;
+}
+.plus-button:hover {
+    background: lightgray;
+}
+
+/* Кнопка "плюс" */
+.profile-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.profile-icon {
+    width: 24px;
+    height: 24px;
+}
+.profile-button:hover {
+    background: lightgray;
+}
+
+/* Модальное окно */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-image {
+    max-height: 80vh;
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    z-index: 10;
+}
+
+.modal-counter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+/* Кнопки слайдера */
+.modal-slider .left-button,
+.modal-slider .right-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    z-index: 10;
+    transition: background-color 0.2s ease;
+}
+
+.modal-slider .left-button {
+    left: 20px;
+}
+
+.modal-slider .right-button {
+    right: 20px;
+}
+    
+.modal-slider .left-icon,
+.modal-slider .right-icon {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+}
+
+.modal-slider .left-button:hover,
+.modal-slider .right-button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-bar {
+        width: 100%;
+        height: 60px;
+        flex-direction: row;
+        padding: 10px;
+        justify-content: space-around;
+    }
+
+    .profile-button {
+        margin: 0;
+    }
+
+    .centre-side {
+        width: 100%;
+        padding: 10px;
+        margin-top: 60px;
+    }
+
+    .image-below-container {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+}
